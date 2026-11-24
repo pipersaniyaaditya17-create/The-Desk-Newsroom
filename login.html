@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Sign in to The Desk newsroom.">
+    <title>Sign in — The Desk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js"></script>
+    <script src="js/auth.js" defer></script>
+  </head>
+  <body class="login-page">
+    <header class="login-header"><a class="wordmark" href="login.html">The Desk<span>.</span></a></header>
+    <main class="login-main">
+      <section class="login-panel" aria-labelledby="page-title">
+        <p class="eyebrow">A CLEAR LINE FROM IDEA TO PUBLICATION</p>
+        <h1 id="page-title">The Desk<span>.</span></h1>
+        <p class="intro">Your newsroom, in good order.</p>
+        <form id="login-form">
+          <label class="field"><span>Username</span><input id="username" name="username" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" required></label>
+          <label class="field"><span>Password</span><span class="password-control"><input id="password" name="password" type="password" autocomplete="current-password" required><button id="toggle-password" class="password-toggle" type="button" aria-controls="password" aria-pressed="false">Show</button></span></label>
+          <fieldset class="role-field">
+            <legend>Sign in as</legend>
+            <div class="role-options">
+              <label class="role-option"><input type="radio" name="role" value="Journalist" checked><span>Journalist</span></label>
+              <label class="role-option"><input type="radio" name="role" value="Editor"><span>Editor</span></label>
+              <label class="role-option"><input type="radio" name="role" value="Admin"><span>Admin</span></label>
+            </div>
+          </fieldset>
+          <label class="remember-option"><input id="remember-username" type="checkbox"><span>Remember my username</span></label>
+          <button id="sign-in-button" class="button button-dark sign-in-button" type="submit">Sign in <span aria-hidden="true">↗</span></button>
+          <p id="login-error" class="login-error" role="status" aria-live="polite"></p>
+        </form>
+        <p class="demo-note">DEMO CREDENTIALS · Divyanshu / Divyanshu001 · ADMIN / ADMIN123</p>
+        <p class="other-demo-note">EDITOR1 / EDITOR123 · JOURNALIST1 OR JOURNALIST2 / JOURNAL123</p>
+      </section>
+    </main>
+    <footer class="site-footer"><span class="footer-wordmark">The Desk<span>.</span></span><p>Made for the work that matters.</p></footer>
+  </body>
+</html>

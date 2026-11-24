@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" data-allowed-roles="Journalist,Editor,Admin">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff"><meta name="description" content="Submit a story idea to The Desk newsroom.">
+    <title>Submit a story — The Desk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js"></script><script src="js/auth.js"></script><script src="js/guard.js"></script>
+    <script src="js/layout.js" defer></script><script src="js/submit.js" defer></script>
+  </head>
+  <body data-page="submit">
+    <main class="page-section page-main">
+      <section class="page-heading"><p class="eyebrow">A GOOD STORY STARTS SOMEWHERE</p><h1>Bring an idea<br>to the desk<span>.</span></h1><p>Share the essential details. The newsroom will take it from here.</p></section>
+      <form id="story-form" class="story-form">
+        <label class="field field-wide"><span>Headline</span><input name="headline" maxlength="140" placeholder="A clear, compelling headline" required></label>
+        <label class="field field-wide"><span>Summary</span><textarea name="summary" rows="4" maxlength="500" placeholder="What is the story, and why does it matter?" required></textarea></label>
+        <label class="field"><span>Category</span><select name="category" required><option value="" disabled selected>Select a desk</option><option>Politics</option><option>Business</option><option>Sports</option><option>Culture</option><option>Tech</option><option>World</option></select></label>
+        <label class="field"><span>Priority</span><select name="priority" required><option>Low</option><option selected>Medium</option><option>High</option><option>Breaking</option></select></label>
+        <label class="field"><span>Deadline</span><input type="date" name="deadline" required></label>
+        <label class="field"><span>Submitted by</span><input name="submitter" maxlength="80" required readonly></label>
+        <div class="field field-wide form-actions"><button class="button button-dark" type="submit">Submit story <span aria-hidden="true">↗</span></button><p class="form-message" role="status">A submitted story will appear on the board.</p></div>
+      </form>
+    </main>
+  </body>
+</html>

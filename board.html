@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" data-allowed-roles="Journalist,Editor,Admin">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff"><meta name="description" content="The Desk newsroom story board.">
+    <title>Story board — The Desk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js"></script><script src="js/auth.js"></script><script src="js/guard.js"></script>
+    <script src="js/ui.js" defer></script><script src="js/layout.js" defer></script><script src="js/board.js" defer></script>
+  </head>
+  <body data-page="board">
+    <main class="page-section page-main">
+      <section class="page-heading"><p class="eyebrow">THE NEWSROOM</p><h1>Stories in motion<span>.</span></h1><p>Every story, from first idea to publication.</p></section>
+      <div class="section-heading board-heading">
+        <div><p class="eyebrow">WORK IN PROGRESS</p><h2>Story board</h2></div>
+        <div class="view-switch" role="group" aria-label="Choose story view">
+          <button type="button" class="view-button is-selected" data-layout="board" aria-pressed="true">Board</button>
+          <button type="button" class="view-button" data-layout="table" aria-pressed="false">List</button>
+        </div>
+      </div>
+      <div class="toolbar" aria-label="Search and filter stories">
+        <label class="search-wrap"><span class="sr-only">Search stories</span><input id="search-input" type="search" placeholder="Search stories" autocomplete="off"></label>
+        <label class="filter-label"><span class="sr-only">Filter by stage</span><select id="stage-filter" class="filter-select"><option value="">All stages</option></select></label>
+        <label class="filter-label"><span class="sr-only">Filter by priority</span><select id="priority-filter" class="filter-select"><option value="">All priorities</option><option>Breaking</option><option>High</option><option>Medium</option><option>Low</option></select></label>
+        <label class="filter-label"><span class="sr-only">Filter by journalist</span><select id="journalist-filter" class="filter-select"><option value="">All journalists</option></select></label>
+        <label class="filter-label"><span class="sr-only">Filter by category</span><select id="category-filter" class="filter-select"><option value="">All categories</option><option>Politics</option><option>Business</option><option>Sports</option><option>Culture</option><option>Tech</option><option>World</option></select></label>
+        <label class="filter-label sort-label"><span class="sr-only">Sort stories</span><select id="sort-select" class="filter-select"><option value="default">Default order</option><option value="priority">Priority: highest first</option><option value="deadline">Deadline: soonest first</option></select></label>
+      </div>
+      <div id="board-view" class="board-view" aria-live="polite"></div>
+      <div id="table-view" class="table-view" hidden aria-live="polite"></div>
+      <p id="empty-state" class="empty-state" hidden>No stories match these filters. Try a different search.</p>
+    </main>
+  </body>
+</html>

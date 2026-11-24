@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" data-allowed-roles="Journalist,Editor,Admin">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff"><meta name="description" content="Published stories from The Desk newsroom.">
+    <title>Published — The Desk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js"></script><script src="js/auth.js"></script><script src="js/guard.js"></script>
+    <script src="js/ui.js" defer></script><script src="js/layout.js" defer></script><script src="js/published.js" defer></script>
+  </head>
+  <body data-page="published">
+    <main class="page-section page-main">
+      <section class="page-heading"><p class="eyebrow">THE WORK, OUT IN THE WORLD</p><h1>Published stories<span>.</span></h1><p>Reporting from our desks, now in the public record.</p></section>
+      <div class="section-heading archive-heading"><div><p class="eyebrow">THE ARCHIVE</p><h2>From the newsroom</h2></div><span class="archive-count" id="archive-count">0 stories</span></div>
+      <section id="published-list" class="published-list" aria-live="polite"></section>
+    </main>
+  </body>
+</html>

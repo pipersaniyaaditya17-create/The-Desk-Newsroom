@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" data-allowed-roles="Editor,Admin">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff"><meta name="description" content="The journalists and editors behind The Desk.">
+    <title>Team — The Desk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js"></script><script src="js/auth.js"></script><script src="js/guard.js"></script>
+    <script src="js/layout.js" defer></script><script src="js/team.js" defer></script>
+  </head>
+  <body data-page="team">
+    <main class="page-section page-main">
+      <section class="page-heading"><p class="eyebrow">THE PEOPLE BEHIND THE BYLINES</p><h1>A good desk is<br>a team effort<span>.</span></h1><p>Journalists and editors, working together to get every detail right.</p></section>
+      <section class="team-section" aria-labelledby="team-list-title">
+        <div class="section-heading"><div><p class="eyebrow">THE NEWSROOM</p><h2 id="team-list-title">Meet the team</h2></div></div>
+        <div class="team-grid" id="team-list"></div>
+      </section>
+      <section id="user-management" class="user-management" aria-labelledby="user-management-title" hidden>
+        <div class="section-heading"><div><p class="eyebrow">ADMINISTRATION</p><h2 id="user-management-title">Manage accounts</h2></div></div>
+        <form id="user-form" class="user-form">
+          <label class="field"><span>Username</span><input name="username" minlength="3" maxlength="32" autocomplete="off" required></label>
+          <label class="field"><span>Temporary password</span><input name="password" type="password" minlength="8" autocomplete="new-password" required></label>
+          <label class="field"><span>Role</span><select name="role" required><option>Journalist</option><option>Editor</option><option>Admin</option></select></label>
+          <button class="button button-dark" type="submit">Add account <span aria-hidden="true">↗</span></button>
+          <p id="user-form-message" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
